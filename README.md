@@ -2,6 +2,8 @@
 
 Introduction to Python 3 designed for Ph.D. Students in Political Science (WUSTL)
 
+Instructor: Ben Noble
+
 ## Topics and Schedule:
 
 | Day   | Date      | Topic                        | Homework				      |
@@ -18,7 +20,7 @@ Introduction to Python 3 designed for Ph.D. Students in Political Science (WUSTL
 | Poster session    | TBD                           | | 
 
 ## Previous Instructors:
-Patrick Cunha Silva (2019), Ryden Buttler (2019), Erin Rossiter (2018),  Michele Torres (2017), David Carlson (2016), and Betül Demirkaya (2015), and Matt Dickenson (2014)
+Patrick Cunha Silva (2020), Ryden Buttler (2019), Erin Rossiter (2018),  Michele Torres (2017), David Carlson (2016), and Betül Demirkaya (2015), and Matt Dickenson (2014)
 
 ## Course Materials:
 Course materials created by Matt Dickeson. Changes over the years made by each instructor, including myself. Prior versions of this course can all be found on GitHub.
