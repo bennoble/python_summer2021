@@ -406,7 +406,6 @@ def add_squares_2(x, y):
 
 add_squares_2(1,2)
 
-
 # Copyright of the original version:
 
 # Copyright (c) 2014 Matt Dickenson

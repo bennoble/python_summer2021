@@ -1,0 +1,45 @@
+---
+Title: Introduction to Python
+Author: Ben Noble
+Date: August 9, 2021
+output: pdf_output
+---
+
+# Course Info:
+
+- **Ben Noble**
+	- Email: [bsnoble@wustl.edu](bsnoble@wustl.edu)
+	- Office Hours: MF 9-10AM (before class, please email me so I am not sitting on Zoom alone!), or by appointment to discuss projects
+
+- **Annamaria Prati**
+	- Email: [aprati@wustl.edu](aprati@wustl.edu)
+
+- Lecture: 10AM-12PM 
+- Lab: 1-3PM
+- Course GitHub: [https://github.com/bennoble/python_summer2021](https://github.com/bennoble/python_summer2021)
+
+*All times central*
+
+## Homeworks:
+
+- There will be 5 homework assignments.
+- Will be due Mondays and Thursdays **before class**.
+- Work together but do not copy/paste code.
+- Submit your homework on GitHub. Commit/comment often.
+- Direct homework questions to Annamaria.
+
+## Poster Projects:
+
+- Show off your python skills with a small project.
+- Try something on your own or ask a faculty member if they have an idea you can help with.
+- Poster session (likely in-person) to other graduate students and faculty.
+- Date and time TBD soon; will be the first week or two of the fall semester.
+- Some warnings: achievable, don't wait until the semester starts—seriously!
+
+# Why Python?
+
+- Helpful for web scraping, interacting with APIs, text, applications.
+- Transferable skills to other programming languages.
+- Sends a signal to faculty, potential industry employers.
+- 83% of data analysts use Python on a regular basis, only 36% said they use R. [(Source)](http://bit.ly/2XQQe8c)
+
