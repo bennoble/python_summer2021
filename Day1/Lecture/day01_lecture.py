@@ -83,7 +83,7 @@ print(name)
 name.split() # Using ' ' as the default separator
 
 # We can use any separator
-name.split('a') ## Using 'a' as separator
+name.split('n') ## Using 'a' as separator
 new_intro.split('\n') ## Using line break as separator
 
 # We can index using negative numbers 
@@ -107,18 +107,19 @@ wustl[::3] ## sequence, every third from beginning
 wustl[1:8] # sequence, from index 1 to 7, remember: Python indexes are n through i exclusive; we drop the 'W' (index 0) and do not include 'o' (index 8)
 
 # We can use a loop to split a string into characters
-[i for i in wustl] # the output is a list, more on this below
+[letter for letter in wustl] # the output is a list, more on this below
 
 # We can join strings in a list using join
 wustl_chr = [i for i in wustl] 
 wustl_chr
-''.join(wustl_chr) # the output is a string
+'-'.join(wustl_chr) # the output is a string
 
 #---------- Integers ----------#
 
 # We can use all mathematical operators with them
 # Integers are not rounded down in Python 3
 3/2 # the result is a float
+type(3)
 type(3/2)
 
 # But, we can round down using floor division //
@@ -127,7 +128,7 @@ type(whole)
 whole
 remainder = 5%3
 print("Five divided by three is {} and {} fifths".format(whole, remainder)) # Or
-print("Five divided by three is %d and %d fifths" %(whole, remainder)) 
+print("Five divided by three is %d and %d fifths" % (whole, remainder)) 
 
 # these two formats are similar, however, format is more flexible in many instances (it did not exist prior to python 2.5)
 print('This will print both a string: {} and a number: {}'.format(name, whole))
@@ -144,7 +145,7 @@ five -= 1
 print(five)
 five *= 2
 print(five)
-
+type(five)
 #---------- Floats ----------#
 
 # Real numbers
@@ -154,6 +155,7 @@ type(12.0) # float
 
 # In Python 3, these are equal. But they are different in Python 2
 12/5 == 12.0/5
+12 == 12.0
 
 # Ultimately, you will be using Python 3, but it is good to know these facts if you pick up someone else's Python 2 code or work with some who is more familar with Python 2 (just like differences between Base R and Tidy R)
 
@@ -179,7 +181,7 @@ wustl_chr
 
 # We can index lists
 wustl_chr[0]
-wustl_chr[-1]
+wustl_chr[-1][0]
 wustl_chr[:2]
 
 # We can also replace objects in a list
@@ -194,7 +196,7 @@ print(wustl_chr[len(wustl_chr)]) # IndexError
 print(wustl_chr[len(wustl_chr) - 1]) # Return the object at the last index
 
 # We can insert into any position using the method inset()
-wustl_chr.insert(0, "!")
+wustl_chr.insert(15, "!")
 wustl_chr
 
 # We can also remove from any position
@@ -212,12 +214,15 @@ wustl_chr
 
 # We can remove all instances from a list using list syntax
 # More on this later
-[i for i in wustl_chr if i != 'i']
+wustl_chr = [i for i in wustl_chr if i != 'i']
 
 # We can check all the methods and attributes in a list using
 dir(wustl_chr)
 
 #---------- Tuples ----------#
+
+l = [7, 'a', '6']
+
 
 # Tuple: (), A tuple is a collection of objects which is ordered and immutable 
 # Not very common, but useful occasionally and will appear from time to time
@@ -269,6 +274,7 @@ myInfo
 
 # Perform an operation (or several) if condition is met (or not)
 x = 1
+
 if x == 1:
 	print('x is one')
 elif x == 2:
@@ -284,7 +290,7 @@ if x == 1:
 	print('x is one')
 elif x == 2:
 	print('x is two')
- else:
+else:
 	print('x is neither one nor two') # IndentationError
 
 # Can be conditions or boolean (True or False)
@@ -296,7 +302,7 @@ False == (1 != 1.0)
 
 # Two types of loops: for and while
 # for loop: loops over iterable objects
-# while loop: 
+# while loop: runs until condition is met 
 
 # A string is an iterable object
 for i in wustl:
@@ -310,9 +316,13 @@ for i in myInfo.items():
 for i in myInfo.keys():
 	print(i)
 
+for i in myInfo.values():
+	print(i)
+
+
 # We can unpack the elements of a dictionary
-for key, value in myInfo.items():
-	print(key, '->', value)
+for k, q in myInfo.items():
+	print(k, '->', q)
 
 # Sometimes is useful to write a short version of the for loop
 sum([.05**i for i in range(1,10)]) # What is happening here?
@@ -322,6 +332,7 @@ for i in range(1,10):
 	mynum.append(.05**i)
 mynum
 sum(mynum) # Sum the values in the list
+
 sum(mynum) == sum([.05**i for i in range(1,10)])
 
 # While loop: loops while condition is true
@@ -353,16 +364,21 @@ for j in ['a', 'b', 'c']:
 # pass: continue the evaluation to the next level
 for i in range(1, 10):
 	if i == 5:
-		print('I have a 5')
 		pass
+		print('I have a 5')
 	print(i)
+
+for i in range(1,10):
+	if i == 5:
+		print(i)
+	else:
+		pass
+
 
 # continue: skip the evaluation and return to the same level
 for i in range(1, 10):
-	if i == 5:
-		print('I have a 5')
-		continue
-	print(i)
+	if i != 5:
+		print(i)
 
 
 #---------- Functions ----------#
@@ -372,6 +388,11 @@ for i in range(1, 10):
 # We can return any type of object
 # Don't forget to add return for output
 
+
+func <- function(x){
+	doing stuff
+}
+
 # Input, output
 def add_squares(x = 2, y = 2):
 	return x**2 + y**2
@@ -380,6 +401,7 @@ add_squares()
 
 # Now, without defaults
 def add_squares_2(x, y):
+	x += 1
 	return x**2 + y**2
 
 add_squares_2(1,2)
