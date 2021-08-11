@@ -17,7 +17,7 @@
 #  - Innermost scope: local names
 #  - Scope of enclosing functions, innermost first
 #  - Next-to-last scope: global names in current module
-#  - Outermost scope: built-in names such as int(), sum() ()
+#  - Outermost scope: built-in names such as int(), sum()
 
 
 # A silly function that prints an integer
@@ -129,8 +129,7 @@ me.latin_name
 you.latin_name
 you.latin_name == me.latin_name
 
-
-# We can define an initialization method (__int__) for our class
+# We can define an initialization method (__init__) for our class
 # create a class
 class Human:
     # attribute for the class
@@ -147,6 +146,8 @@ me = Human(age = 30, pronoun = 'he', name = 'Ben')
 # We can check all the attributes for the instance
 dir(me)
 
+you = Human(name = 'Annamaria', pronoun = 'she', age = 'NA')
+
 # We may include default arguments to the initializer, as we do with methods
 class Human:
     # attribute for the class
@@ -157,7 +158,7 @@ class Human:
         self.age = age 
         self.pronoun = pronoun
         self.name = name 
-me = Human(age = 30)
+me = Human(age = 30, name = 'Ben')
 # Make sure you set the non-default arguments first in our new class.
 me.age
 me.pronoun
@@ -175,6 +176,7 @@ class Human:
     # add functions for the class
     def speak(self, words): 
         return words
+
     def introduce(self):
         if self.pronoun in ['she', 'She']: 
             return self.speak("Hello. I'm Ms. %s" % self.name)
@@ -185,7 +187,7 @@ class Human:
 
 # We can create an instance of Human, then use the methods associated with it.
 me = Human(age = 30, pronoun = 'he', name = 'Ben')
-me.speak('Hi!')
+me.speak('Hi Anmann!')
 me.introduce()
 
 #---------- Inheritance and Polymorphism ----------#
@@ -206,6 +208,7 @@ class PhDStudent(Human):
         self.field = field
 me = PhDStudent(age = 30, name = 'Ben', pronoun = 'he', field = 'american politics')
 me.field
+me.introduce()
 
 # Polymorphism adapts a given method of a class to its sub-classes.
 # Same function name being used for different types (classes)
@@ -244,6 +247,9 @@ for sub in (obj_cp, obj_ir, obj_ap):
 # 
 # Note that all our students only have one name.
 
+# 2: JDW, Amann
+# 4: Ben
+
 class School():
     def __init__(self, school_name): #initialize instance of class School with parameter name
         self.school_name = school_name #user must put name, no default
@@ -268,7 +274,6 @@ class School():
     def __str__(self): #print method will display the school name and sorted student, note the built in
         return "%s\n%s" %(self.school_name, self.sort())
 
-
 # Create an instance of School 
 washu = School("Washington University in St. Louis")
 
@@ -292,6 +297,7 @@ print(washu)
 # Search students using their grades
 print(washu.grade(4))
 print(washu.grade(2))
+print(washu.grade(3))
 
 # Can we add a different sort method to sort the students ~within~ the object?
 
@@ -331,7 +337,6 @@ class Parent():
   def list_children(self):
     for kid in self.kids:
       print("I am the " + self.role() + " of " + kid.name())
-
 
 class Child():
   def __init__(self, firstname, parent):
@@ -375,6 +380,7 @@ print(jack.introduce())
 mom.list_children()
 jack.parent.list_children()
 jack.parent.kids[0].parent.list_children()
+
 
 # Print jack's siblings
 jack.siblings()
