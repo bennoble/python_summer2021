@@ -99,6 +99,15 @@ rm.uniform(0,1)
 # Classes help you create objects with 
 #  - certain attributes
 #  - ability to perform certain functions.
+
+# Why Classes?
+# - Classes provide an easy way of keeping data, methods, 
+#   and functions in one place.
+# - Inherentence of methods and functions (more to come below) 
+# - Ability to reuse the code which makes the program more efficient.
+# - Cleaner structure to the code and better readability
+# Source: https://intellipaat.com/blog/tutorial/python-tutorial/python-classes-and-objects/#_Advantages_of_class
+
 # An instance is a particular realization of a class.
 # We use attributes and methods of classes all the time in R.
 
