@@ -9,7 +9,7 @@ Instructor: Ben Noble
 | Day   | Date      | Topic                        | Homework				      |
 |------ |-----------|------------------------------|------------------------------|
 | Day 01 | Mon. 8/09 | Data Structure and Syntax    | |	  
-| Day 02 | Wed. 8/11 | Namespace and classes        | HW1 assigned, (due 8/16) |
+| Day 02 | Wed. 8/11 | Namespace and Classes        | HW1 assigned, (due 8/16) |
 | Day 03 | Fri. 8/13 | Errors and Exceptions        | |
 | Day 04 | Mon. 8/16 | Web Scraping                 | HW2 assigned, (due 8/20) |
 | Day 05 | Wed. 9/18 | Regular Expressions          | |

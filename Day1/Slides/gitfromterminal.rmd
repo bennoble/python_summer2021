@@ -61,7 +61,7 @@ Pulling will add changes from the origin (i.e. my repository, when I post them) 
 3. Type `git checkout main`.
 4. Type `git merge upstream/main`.
 
-## Bonus: Shortcuts!
+## Bonus: Shortcuts! (Mac Only)
 
 All of these commands, so much typing. Yuck! It turns out that we can create our own shortcuts in terminal.
 
@@ -72,4 +72,5 @@ To create a shortcut use the following syntax: `alias shortcut = "command"`  whe
 For example, accessing the profile is a lot of code to remember, so I've created a shortcut to access it with the code: `alias profile="touch ~/.bash_profile; open ~/.bash_profile"`. Now, any time I open terminal and type `profile`, my computer will open this profile file.
 
 You can create any kind of shortcut you want, so for example, to create a shortcut for `git pull upstream/master`, I could type: `alias pu="git pull upstream/master"` where "pu" stands for pull (but you could use anything here, like "q" or "kds", not just "pu", but of course you want to be able to easily remember it).
+
 
