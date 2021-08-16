@@ -90,6 +90,14 @@ all_a_tags = soup.find_all('a')
 all_a_tags
 all_a_tags[34].attrs  # returns a dictionary with the attributes
 
+all_a_tags[34]['href']
+all_a_tags[34]['class']
+
+for i in range(34,40):
+  print(all_a_tags[i]['href'])
+
+all_a_tags[0].attrs
+
 # Note: because all_a_tags is a list, we need to index the element.
 # If we are interested in the first instance of the tag 'a,' we can use
 soup.find('a')
@@ -110,6 +118,7 @@ all_a_tags[34].attrs.keys()
 all_a_tags[34]['href']
 all_a_tags[34]['class']
 
+all_a_tags[1]['class']
 
 # If we are interested only in the attributes 'class' and 'card' 
 # nested within tag 'a', we can specify this in our first call:
@@ -122,6 +131,7 @@ len(sections) # check the size of the object
 sections[2].a # FIRST 'a' tag within the 'div' tag OR:
 sections[2].find('a') # FIRST 'a' tag within the 'div' tag
 sections[2].find_all('a') ## ALL 'a' tags within the 'div' tag
+sections[4].find_all('a', {'class' : 'first-level'}) ## ALL 'a' tags within the 'div' tag
 
 
 # Creating a tree of objects. 
@@ -206,6 +216,8 @@ import time
 time.sleep(random.uniform(1, 5))
 print('Pause Ended')
 
+time.sleep(5)
+print('done')
 
 #---------- Remote Driver ----------#
 
@@ -268,6 +280,7 @@ options.add_argument("headless") # silent option to not open browser
 
 # run the function for the first 2 cases
 for i in range(0, 2):
+  print(i)
   page.append(url + mps[i]['href'])
   driver = webdriver.Chrome(options = options, executable_path = driver_path)
   driver.get(page[i])
@@ -278,8 +291,7 @@ for i in range(0, 2):
   soup = soup.find(class_ = 'article box news').find('div', class_ = 'person')
   party.append(soup.find(class_ = 'office').find_all('li')[1].text)
   email.append(soup.find(class_ = 'contactinfo first notexternal').find('a', href = True)['href'].split(":")[1])
-
-  # soup.find('ul', {'class' : 'contactinfo first notexternal'}).find('a', href = True)['href'].split(":")[1]
+  # time.sleep(5)
 
 # More on Selenium:
 # https://selenium-python.readthedocs.io/locating-elements.html
@@ -358,7 +370,7 @@ with open('test_writefile.txt', 'w') as f:
   f.writelines(['a\n', 'b\n', 'c\n'])
 
 # We use 'a' to append new information to it
-with open('test_writefile.txt', 'a') as f:
+with open('test_writefile_2.txt', 'a') as f:
   f.write("I got appended!")
 
 # See https://stackabuse.com/file-handling-in-python/ for more options
@@ -452,9 +464,9 @@ with open('iceland_test.csv', 'w') as f: # set up with the writer
 
 # Google Chrome is better to track nodes and page sources
 # Inspect the source and get to know your document/website!
-# Use the ’Copy Xpath’ command if you’re having troubles 
+# Selenium—Use the ’Copy Xpath’ command if you’re having troubles 
 # (Find it in "Inspect" in Google Chrome)
-# Use time breaks to avoid being blocked
+# Use time breaks to avoid being blocked and be polite
 # Check the Terms of Service (whether you obey them or not)
 
 
