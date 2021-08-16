@@ -14,7 +14,6 @@ import urllib.request
 import csv 
 
 # web_address = 'https://polisci.wustl.edu/people/88/all'
-# web_address = 'https://polisci.wustl.edu/people/88/list/88/all'
 
 
 
