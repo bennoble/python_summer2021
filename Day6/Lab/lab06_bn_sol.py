@@ -1,8 +1,6 @@
 import importlib
 import os
 import googlemaps
-# pip install python-google-places
-from googleplaces import GooglePlaces, types, lang
 
 os.chdir('/Users/bennoble/Dropbox/Ben/Keys')
 imported_items = importlib.import_module('start_google')

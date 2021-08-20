@@ -231,7 +231,7 @@ limit["resources"] ## another dictionary
 limit["resources"].keys()
 limit["resources"]["tweets"] ## another dictionary!!
 
-for i in limit["resources"]["tweets"].keys():
+ for i in limit["resources"]["tweets"].keys():
 	print(limit["resources"]["tweets"][i]) ## another dictionary!
 
 # Create user objects
@@ -261,7 +261,7 @@ joe.followers_count
 # Gives back user objects
 joe_20 = joe.followers() ## only the first 20!
 len(joe_20)
-joe_20
+joe_20[0]
 
 # Screen names
 [f.screen_name for f in joe_20]
@@ -277,32 +277,35 @@ len(joe_5000)
 joe_5000[0]
 
 # Get followers geo location
-for follower_id in joe.followers_ids()[0:25]:
-	user = api.get_user(follower_id)
-	if user.location == '':
-		print('Not available')
-	else: 
-		print(user.location)
+for follower_id in joe.followers_ids()[0:2500]:
+	try:
+		user = api.get_user(follower_id)
+		if user.location == '':
+			print('Not available')
+		else: 
+			print(user.location)
+	except:
+		time.sleep(15*60)
 
 # Normally count = 200 is limit, let's go around that.
 
 # By default, each method returns the first page, 
 # which usually contains a few dozen items.
 # We can define the pagination manually to get more results
-joe_statuses = []
-for p in range(0, 10):
-	# extend gets the entire tweet
-	joe_statuses.extend(api.user_timeline(id = 'JoeBiden', page = i, count = 20))
+# joe_statuses = []
+# for p in range(0, 10):
+# 	# extend gets the entire tweet
+# 	joe_statuses.extend(api.user_timeline(id = 'JoeBiden', page = i, count = 20))
 
-joe_statuses[0].text
-joe_statuses[len(joe_statuses)-1].text
+# joe_statuses[0].text
+# joe_statuses[len(joe_statuses)-1].text
 
-# How was it tweeted?
-source = [x.source for x in joe_statuses]
-source
+# # How was it tweeted?
+# source = [x.source for x in joe_statuses]
+# source
 
-# Print tweets with source equal to iPhone
-[x.text for x in joe_statuses if x.source == "Twitter for iPhone"]
+# # Print tweets with source equal to iPhone
+# [x.text for x in joe_statuses if x.source == "Twitter for iPhone"]
 
 
 # Cursor performs pagination easily for you
@@ -327,7 +330,7 @@ len(histweets) # for some weird reason, it is returning a random number of statu
 
 # You should definitely hit the rate limit here.....
 hisfollowers = []
-for item in tweepy.Cursor(api.followers_ids, 'JoeBiden').items():
+for item in tweepy.Cursor(api.followers, 'JoeBiden').items():
 	hisfollowers.append(item)
 len(hisfollowers)
 
