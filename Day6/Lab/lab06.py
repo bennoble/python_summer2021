@@ -13,7 +13,7 @@ import googlemaps
 
 os.chdir('you/key/dir')
 imported_items = importlib.import_module('start_google')
-gmaps = imported_items.gmaps
+gmaps = imported_items.client
 
 whitehouse = '1600 Pennsylvania Avenue, Washington, DC'
 
