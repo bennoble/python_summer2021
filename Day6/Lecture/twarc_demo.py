@@ -11,7 +11,7 @@ import csv
 import pandas as pd
 
 # start up the client with your academic bearer token
-client = Twarc2(bearer_token="AAAAAAAAAAAAAAAAAAAAABQHMgEAAAAAynjvggWFYs8l3sFLN3bBtZirKL0%3DvnB9o8yjZ9vwIqv3VAqVu33dxNcW5P1oBO9Pa244Vh5DePe41c")
+client = Twarc2(bearer_token="")
 
 # specify the filepath and name
 filename = '/Users/bennoble/Desktop/test.csv'
@@ -24,7 +24,7 @@ cand_twit = ['https://www.twitter.com/PerkinsForUSSen',
  'https://www.twitter.com/schustercampai1',
  'https://www.twitter.com/cwesleymorgan']
 
-with open(filename, 'a') as f: # open the csv writer
+with open(filename, 'w') as f: # open the csv writer
     writer = csv.DictWriter(f, fieldnames = ('twitter_handle', 'author_id', 'follower_count', 'created_at', 'tweet_id', 'text', 'rts', 'replys', 'likes', 'quotes', 'link', 'ref_tweet', 'ref_tweet_id', 'ref_tweet_user_id')) # define the columns
     writer.writeheader() # write the header
     tweet = {}
