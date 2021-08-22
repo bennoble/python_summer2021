@@ -13,7 +13,7 @@ Instructor: Ben Noble
 | Day 03 | Fri. 8/13 | Errors and Exceptions        | |
 | Day 04 | Mon. 8/16 | Web Scraping                 | HW2 assigned, (due 8/20) |
 | Day 05 | Wed. 9/18 | Regular Expressions          | |
-| Day 06 | Fri. 8/20 | APIs                         | HW3 assigned, (due 8/23) |
+| Day 06 | Fri. 8/20 | APIs                         | HW3 assigned, (due 8/25) |
 | Day 07 | Mon. 8/23 | SQL and Database	            | |
 | Day 08 | Wed. 8/25 | Recursion and Sorting        | HW4 assigned, (due 8/30) |
 | Day 09 | Fri. 8/27 | More on Data Structure       | HW5 assigned, (due 9/03) |
