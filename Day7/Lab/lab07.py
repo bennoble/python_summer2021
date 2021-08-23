@@ -112,13 +112,21 @@ for town in session.query(Town).order_by(Town.id):
   print(town.id, town.name, town.population)
 
 
+
 # TODO: 
 # 1. Display, by department, the cities having
 #    more than 50,000 inhabitants.
-# 2. Display the total number of inhabitants
-#    per department
 
 
+# 2. Display the towns with the minimum population in each region
+# print town name, population, region name
+# Hint: subqueries
+
+
+# 3. Display the total number of inhabitants
+#    per department using only a query (no lists!)
+
+  
 
 
 
