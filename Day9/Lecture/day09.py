@@ -34,8 +34,8 @@ x[0]
 
 # We can also include and index many types of data
 y = pd.Series([10, 'a string', ['a','b'], 5])
-x[2]
-x[2][0]
+y[2]
+y[2][0]
 
 # DataFrame:
 # - nXk array. Similar to a data.frame in R.
@@ -134,6 +134,7 @@ a = np.array([(1, 2, 3), (1, 2, 3)])
 a
 # Arrays are faster than lists 
 
+
 # We can do mathematical operations
 # If two arrays have the same dimension 
 print(a.ndim)
@@ -216,6 +217,8 @@ list(zipped)
 zipped = zip(my_list, my_square_list, map(lambda x: my_square_list[x] * my_list[x], range(0, 10)))
 unzipped1, unzipped2, unzipped3 = zip(*zipped)
 unzipped1
+unzipped2
+unzipped3
 
 # filter
 # returns elements only for which condition is True
@@ -312,6 +315,8 @@ u = {"A" : [29, 30, 27]}
 d.update(u)
 d
 
+d['A']
+
 #---------- For/else ----------#
 
 # What is happening here?
@@ -331,7 +336,7 @@ else:
 	print('print this')	
 print('this other thing')
 
-# Our find_prime() from wednesdauy:
+# Our find_prime() from wednesday:
 def find_primes(me = 121, primes = []):
     if me == 2:
     	primes.append(2)
